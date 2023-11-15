@@ -1,17 +1,23 @@
-.container {
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.trayContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 64px;
+    width: 736px;
 }
 
-.container .trayHeader {
+.trayContainer .trayHeader {
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: space-between;
 }
 
-.container .trayBody {
+.trayContainer .trayBody {
     display: flex;
     flex-direction: column;
     justify-content: center;

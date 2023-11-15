@@ -4,7 +4,8 @@ import styles from './TaskTray.module.css'
 
 export const TaskTray = () => {
   return (
-    <div className={styles.container}>
+    <main>
+      <div className={styles.trayContainer}>
         <div className={styles.trayHeader}>
             <span>Tarefas criadas</span>
             <span>Concluidas</span>
@@ -13,7 +14,7 @@ export const TaskTray = () => {
             <Task />
             <Task />
         </div>
-        
-    </div>
+      </div>
+    </main>
   )
 }
