@@ -1,9 +1,9 @@
 import styles from './Task.module.css'
 
-export const Task = () => {
+export const Task = ({task} : any) => {
   return (
     <div className={styles.container}>
-        Task
+        {task.title}
     </div>
   )
 }

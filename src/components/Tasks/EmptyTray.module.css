@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid var(--gray-400);
+}
+
+.container main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 736px;
+    height: 244px;
+
+}
+
+.container main img {
+    width: 56px;
+    height: 56px;
+    padding-bottom: 16px;
+}
+
+.container main p {
+    margin: 0 10px;
+    color: var(--gray-300);
+}
+

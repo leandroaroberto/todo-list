@@ -3,11 +3,22 @@ import { TaskTray } from './components/Tasks/TaskTray'
 import './global.css'
 import styles from './App.module.css'
 
+export interface TasksProps {
+  id: number;
+  title: string;
+  isSelected: boolean;
+}
+
+const tasks: Array<TasksProps> = [
+  // {id: 1, title: 'Task 1', isSelected: false},
+  // {id: 2, title: 'Task 2', isSelected: false},
+];
+
 function App() {
   return (
     <div className={styles.container}>
       <Header />
-      <TaskTray />
+      <TaskTray tasks={tasks}/>
     </div>
   )
 }
