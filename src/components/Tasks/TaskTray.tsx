@@ -13,11 +13,11 @@ export const TaskTray = ({tasks} : TaskTrayProps) => {
         <div className={styles.trayHeader}>
             <div>
               <span className={styles.blue}>Tarefas criadas</span>
-              <span>{tasks.length}</span>
+              <span className={styles.counter}>{tasks.length}</span>
             </div>
             <div>
               <span className={styles.purple}>Concluídas</span>
-              <span>0</span>
+              <span className={styles.counter}>0</span>
             </div>
         </div>
         <div className={styles.trayBody}>

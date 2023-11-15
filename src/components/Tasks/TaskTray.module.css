@@ -34,6 +34,14 @@ main {
     size: 14px;
 }
 
+.counter {
+    background: var(--gray-400);
+    color: var(--gray-200);
+    padding: 2px 8px;
+    border: 1px var(--gray-200);
+    border-radius: 100%;
+}
+
 .trayContainer .trayBody {
     display: flex;
     flex-direction: column;
