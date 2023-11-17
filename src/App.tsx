@@ -2,6 +2,7 @@ import { Header } from './components/Header/Header'
 import { TaskTray } from './components/Tasks/TaskTray'
 import './global.css'
 import styles from './App.module.css'
+import { NewTask } from './components/Tasks/NewTask';
 
 export interface TasksProps {
   id: number;
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className={styles.container}>
       <Header />
+      <NewTask />
       <TaskTray tasks={tasks}/>
     </div>
   )
