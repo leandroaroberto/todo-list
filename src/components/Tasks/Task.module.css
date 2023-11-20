@@ -1,4 +1,37 @@
 .container {
     min-height: 72px;
     padding-top:12px;
+    width: 736px;
+}
+
+.container .task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gray-400);
+    min-height: 72px;
+    border: none;
+    border-radius: 8px;
+}
+
+.container .task .taskContent {
+    width: 632px;
+    margin-left: 1rem;
+}
+
+.container .task .taskRadio {
+    margin-left: 1.20rem;
+}
+
+
+.container .task .trashButton {
+    margin-right: 1.20rem;
+    color: var(--gray-300);
+    cursor: pointer;
+}
+
+.container .task .trashButton:hover {
+    color: var(--danger);
+    cursor: pointer;
 }
