@@ -10,7 +10,7 @@ main {
     justify-content: space-between;
     gap: 8px;
     width: 736px;
-    height: 54PX;
+    /* height: 54PX; */
 }
 
 .container input {
@@ -21,6 +21,7 @@ main {
     border-radius: 8px;
     padding: 1rem;
     size: 1rem;
+    z-index: 10;
 }
 
 .container button {
