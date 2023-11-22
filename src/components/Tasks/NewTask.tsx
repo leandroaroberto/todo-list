@@ -4,7 +4,7 @@ import { Plus } from '@phosphor-icons/react';
 import { v4 as uuid } from 'uuid';
 import { TasksProps } from '../../App';
 
-interface Task {
+export interface Task {
   tasks : Array<TasksProps>;
   onSetTasks: ([]) => void;
 }
@@ -16,10 +16,12 @@ export const NewTask = ({onSetTasks, tasks} : Task) => {
 
   function handleAddTask(e : FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    const myUUID = uuid();
-    const newTask = {id: myUUID, title: taskInput, isSelected: false}
-    onSetTasks([...tasks, newTask])
-    setTaskInput('')
+    if (taskInput != '') {
+      const myUUID = uuid();
+      const newTask = {id: myUUID, title: taskInput, isSelected: false}
+      onSetTasks([...tasks, newTask])
+      setTaskInput('')
+    }
   }
 
   function handleTaskInput(e: ChangeEvent<HTMLInputElement>) {

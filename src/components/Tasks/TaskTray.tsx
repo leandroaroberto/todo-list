@@ -4,9 +4,17 @@ import { Task } from './Task'
 import styles from './TaskTray.module.css'
 interface TaskTrayProps {
   tasks : Array<TasksProps>;
+  onSetTasks: () => void;
 }
 
-export const TaskTray = ({tasks} : TaskTrayProps) => {
+export const TaskTray = ({tasks, onSetTasks} : TaskTrayProps) => {
+
+  function handleDeleteTask(id: string) {
+    const newTasks = tasks.filter(task => task.id !== id)
+    onSetTasks(newTasks)
+  }
+
+
   return (
     <main>
       <div className={styles.trayContainer}>
@@ -21,7 +29,7 @@ export const TaskTray = ({tasks} : TaskTrayProps) => {
             </div>
         </div>
         <div className={styles.trayBody}>
-          {tasks.length ? tasks.map(task => <Task key={task.id} task={task}/>) : <EmptyTray /> }
+          {tasks.length ? tasks.map(task => <Task key={task.id} task={task} handleDeleteTask={handleDeleteTask}/>) : <EmptyTray /> }
         </div>
       </div>
     </main>

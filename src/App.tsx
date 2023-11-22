@@ -2,7 +2,7 @@ import { Header } from './components/Header/Header'
 import { TaskTray } from './components/Tasks/TaskTray'
 import './global.css'
 import styles from './App.module.css'
-import { NewTask } from './components/Tasks/NewTask';
+import { NewTask} from './components/Tasks/NewTask';
 import { useState } from 'react';
 
 export interface TasksProps {
@@ -11,6 +11,8 @@ export interface TasksProps {
   isSelected: boolean;
 }
 
+
+
 function App() {
   const [ tasks, setTasks ] = useState<TasksProps[]>([])
 
@@ -18,7 +20,7 @@ function App() {
     <div className={styles.container}>
       <Header />
       <NewTask onSetTasks={setTasks} tasks={tasks}/>
-      <TaskTray tasks={tasks}/>
+      <TaskTray onSetTasks={setTasks} tasks={tasks}/>
     </div>
   )
 }
