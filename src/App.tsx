@@ -3,23 +3,21 @@ import { TaskTray } from './components/Tasks/TaskTray'
 import './global.css'
 import styles from './App.module.css'
 import { NewTask } from './components/Tasks/NewTask';
+import { useState } from 'react';
 
 export interface TasksProps {
-  id: number;
+  id: string;
   title: string;
   isSelected: boolean;
 }
 
-const tasks: Array<TasksProps> = [
-  {id: 1, title: 'Task 1', isSelected: false},
-  {id: 2, title: 'Task 2', isSelected: false},
-];
-
 function App() {
+  const [ tasks, setTasks ] = useState<TasksProps[]>([])
+
   return (
     <div className={styles.container}>
       <Header />
-      <NewTask />
+      <NewTask onSetTasks={setTasks} tasks={tasks}/>
       <TaskTray tasks={tasks}/>
     </div>
   )

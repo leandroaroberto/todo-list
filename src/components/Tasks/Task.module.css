@@ -17,7 +17,7 @@
 
 .container .task .taskContent {
     width: 632px;
-    margin-left: 1rem;
+    margin: 0 1rem;
 }
 
 .container .task .taskRadio {
