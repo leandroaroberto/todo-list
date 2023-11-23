@@ -1,0 +1,16 @@
+
+.checked{
+    color: var(--purple-dark);
+}
+
+.checked:hover {
+    color: var(--purple);
+}
+
+.unchecked {
+    color: var(--blue);
+}
+
+.unchecked:hover {
+    color: var(--blue-dark);
+}

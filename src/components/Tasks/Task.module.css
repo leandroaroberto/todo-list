@@ -35,3 +35,12 @@
     color: var(--danger);
     cursor: pointer;
 }
+
+.container .task .taskContentSelected {
+    width: 632px;
+    margin: 0 1rem;
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+

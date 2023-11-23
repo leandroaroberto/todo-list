@@ -4,7 +4,7 @@ import { Task } from './Task'
 import styles from './TaskTray.module.css'
 interface TaskTrayProps {
   tasks : Array<TasksProps>;
-  onSetTasks: () => void;
+  onSetTasks: (newTasks: Array<TasksProps>) => void;
 }
 
 export const TaskTray = ({tasks, onSetTasks} : TaskTrayProps) => {
@@ -29,7 +29,7 @@ export const TaskTray = ({tasks, onSetTasks} : TaskTrayProps) => {
             </div>
         </div>
         <div className={styles.trayBody}>
-          {tasks.length ? tasks.map(task => <Task key={task.id} task={task} handleDeleteTask={handleDeleteTask}/>) : <EmptyTray /> }
+          {tasks.length ? tasks.map(task => <Task key={task.id} task={task} handleDeleteTask={handleDeleteTask} handleSetTask={onSetTasks} tasks={tasks}/>) : <EmptyTray /> }
         </div>
       </div>
     </main>
