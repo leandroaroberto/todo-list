@@ -1,27 +1,15 @@
-# React + TypeScript + Vite
+# Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Typescript application to add/remove/mark as done your tasks
 
-Currently, two official plugins are available:
+Developed by Leandro Roberto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshot
 
-## Expanding the ESLint configuration
+![2023-11-23_22-36](https://github.com/leandroqa/todo-list/assets/24318272/d98dab53-bc99-4be9-a37e-05a3447a4900)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![2023-11-23_22-57](https://github.com/leandroqa/todo-list/assets/24318272/2ef99de5-edb0-4cf3-bcf4-f734c01fff2f)
 
-- Configure the top-level `parserOptions` property like this:
+![2023-11-23_22-57_1](https://github.com/leandroqa/todo-list/assets/24318272/1bb4271a-7f32-4a31-9338-3be0e4d5dde0)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![2023-11-23_22-58](https://github.com/leandroqa/todo-list/assets/24318272/271177e5-76e2-4fa7-8c4e-75f00cc8d28d)
