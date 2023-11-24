@@ -43,14 +43,6 @@ main {
 }
 
 .container button span {
-    size: 0.875rem;
+    size: 1rem;
     font-weight: bold;
-}
-
-.iconBorder {
-    padding: 4px;
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid;
-    border-radius: 100%;
 }

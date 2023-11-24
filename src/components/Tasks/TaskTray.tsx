@@ -1,4 +1,5 @@
 import { TasksProps } from '../../App';
+import { Counter } from '../Counter/Counter';
 import { EmptyTray } from './EmptyTray'
 import { Task } from './Task'
 import styles from './TaskTray.module.css'
@@ -25,7 +26,7 @@ export const TaskTray = ({tasks, onSetTasks} : TaskTrayProps) => {
             </div>
             <div>
               <span className={styles.purple}>Concluídas</span>
-              <span className={styles.counter}>0</span>
+              <span className={styles.counter}><Counter tasks={tasks} /></span>
             </div>
         </div>
         <div className={styles.trayBody}>

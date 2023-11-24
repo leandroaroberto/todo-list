@@ -17,7 +17,7 @@ export const Task = ({task, handleDeleteTask, handleSetTask, tasks} : TaskCompPr
   const [ radioChecked, setRadioChecked ] = useState(false)
 
   function onHandleDeleteTask() {
-    const response = confirm("Are you sure you want to delete that?");
+    const response = confirm("Remover item selecionado?");
     if (response) {
       handleDeleteTask(task.id)
     }
@@ -25,8 +25,14 @@ export const Task = ({task, handleDeleteTask, handleSetTask, tasks} : TaskCompPr
 
   function handleRadioCheck() {
     setRadioChecked(! radioChecked)
-    const updatedTask = tasks.filter(t => t.id !== task.id)
-    handleSetTask([...updatedTask, {id: task.id, title: task.title, isSelected: ! radioChecked}])
+    const updatedTask = tasks.map((t) => {
+      if (t.id === task.id ) {
+        return {id: task.id, title: task.title, isSelected: ! radioChecked};
+      } else {
+        return t;
+      }
+    });
+    handleSetTask(updatedTask)
   }
 
   return (

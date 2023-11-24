@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import styles from './NewTask.module.css'
-import { Plus } from '@phosphor-icons/react';
+import { PlusCircle } from '@phosphor-icons/react';
 import { v4 as uuid } from 'uuid';
 import { TasksProps } from '../../App';
 
@@ -16,7 +16,7 @@ export const NewTask = ({onSetTasks, tasks} : Task) => {
 
   function handleAddTask(e : FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    if (taskInput != '') {
+    if (taskInput.trim() != '') {
       const myUUID = uuid();
       const newTask = {id: myUUID, title: taskInput, isSelected: false}
       onSetTasks([...tasks, newTask])
@@ -41,7 +41,7 @@ export const NewTask = ({onSetTasks, tasks} : Task) => {
             />
             <button type="submit">
                 <span>Criar</span>
-                <span className={styles.iconBorder}><Plus /></span>
+                <span><PlusCircle size={25} /></span>
             </button>
         </form>
     </main>)
