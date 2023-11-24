@@ -3,7 +3,7 @@ import { Counter } from '../Counter/Counter';
 import { EmptyTray } from './EmptyTray'
 import { Task } from './Task'
 import styles from './TaskTray.module.css'
-interface TaskTrayProps {
+export interface TaskTrayProps {
   tasks : Array<TasksProps>;
   onSetTasks: (newTasks: Array<TasksProps>) => void;
 }

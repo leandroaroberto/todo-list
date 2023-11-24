@@ -11,8 +11,6 @@ export interface TasksProps {
   isSelected: boolean;
 }
 
-
-
 function App() {
   const [ tasks, setTasks ] = useState<TasksProps[]>([])
 

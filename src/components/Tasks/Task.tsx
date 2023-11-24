@@ -2,14 +2,13 @@ import { useState } from 'react';
 import { CustomRadio } from '../CustomRadio/CustomRadio';
 import styles from './Task.module.css'
 import { Trash } from '@phosphor-icons/react';
-import { Task as TaskProp} from './NewTask';
 import { TasksProps } from '../../App';
 
 interface TaskCompProps {
   task: TasksProps;
   handleDeleteTask: (id: string) => void;
   handleSetTask : (newTasks: Array<TasksProps>) => void;
-  tasks: Array<TaskProp>;
+  tasks: Array<TasksProps>;
 }
 
 export const Task = ({task, handleDeleteTask, handleSetTask, tasks} : TaskCompProps) => {

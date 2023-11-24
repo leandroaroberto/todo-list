@@ -1,6 +1,14 @@
-export const Counter = ({tasks} : any) => {
+import { TasksProps } from "../../App"
 
-    function handleCounter(total, current) {
+interface CounterProps {
+    tasks: Array<TasksProps>;
+}
+
+export const Counter = ({tasks} : CounterProps) => {
+
+    console.log('tasks:',tasks)
+
+    function handleCounter(total: number, current: TasksProps) {
         console.log(current.isSelected)
         if (current.isSelected === true) {
             return total + 1

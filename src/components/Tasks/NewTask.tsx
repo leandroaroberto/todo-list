@@ -2,15 +2,9 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import styles from './NewTask.module.css'
 import { PlusCircle } from '@phosphor-icons/react';
 import { v4 as uuid } from 'uuid';
-import { TasksProps } from '../../App';
+import { TaskTrayProps } from './TaskTray';
 
-export interface Task {
-  tasks : Array<TasksProps>;
-  onSetTasks: ([]) => void;
-}
-
-
-export const NewTask = ({onSetTasks, tasks} : Task) => {
+export const NewTask = ({onSetTasks, tasks} : TaskTrayProps) => {
 
   const [ taskInput, setTaskInput ] = useState('')
 
