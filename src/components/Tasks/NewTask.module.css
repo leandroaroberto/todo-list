@@ -24,6 +24,10 @@ main {
     font-family:  Inter, sans-serif;  
 }
 
+.container input:focus {
+    color: var(--gray-100);
+}
+
 .container button {
     width: 90px;
     background: var(--blue-dark);
